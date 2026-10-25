@@ -19,7 +19,10 @@ int main() {
     villagerData["Raymond"] = make_tuple(8, "Cat", "Nice fit");
 
     int choice =0;
+    int friendship;
     string name;
+    string species;
+    string catchphrase;
 
     //menu
     while (choice != 6) {
@@ -33,6 +36,43 @@ int main() {
         cout << "6. Exit" << endl;
         cout << "Enter choice: ";
         cin >> choice;
+
+
+        if (choice == 1) {
+            cout << "Villager name: ";
+            cin >> name;
+
+            cout << "Friendship level: ";
+            cin >> friendship;
+
+            cout << "Species: ";
+            cin >> species;
+
+            cout << "Catchphrase: ";
+            cin.ignore();
+            getline(cin, catchphrase);
+
+            villagerData[name] = make_tuple(friendship, species, catchphrase);
+
+            cout << name << " added." << endl;
+        }
+        
+        if (choice == 2) {
+            cout << "Villager name: ";
+            cin >> name;
+
+            auto it = villagerData.find(name);
+
+            if (it != villagerData.end()) {
+                villagerData.erase(name);
+            }
+            else {
+                cout << name << " not found." << endl;
+            }
+        }
+        
+        
+        
         if (choice == 3) {
             cout << "Villager name: ";
             cin >> name;
