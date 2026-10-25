@@ -36,8 +36,7 @@ int main() {
     }
 
     // delete an element
-    //villagerColors.erase("Raymond");
-    villagerData.erase("Raymond");
+    //villagerData.erase("Raymond");
 
     // search for an element using .find() to avoid errors
     string searchKey = "Drago";
@@ -54,9 +53,9 @@ int main() {
         cout << endl << searchKey << " not found." << endl;
 
     // report size, clear, report size again to confirm map operations
-    cout << "\nSize before clear: " << villagerData.size() << endl;
-    villagerData.clear();
-    cout << "Size after clear: " << villagerData.size() << endl;
+    // cout << "\nSize before clear: " << villagerData.size() << endl;
+    // villagerData.clear();
+    // cout << "Size after clear: " << villagerData.size() << endl;
 
     return 0;
 }
