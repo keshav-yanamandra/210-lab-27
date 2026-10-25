@@ -14,6 +14,9 @@ int main() {
     //map<string, vector<string>> villagerColors;
     map<string, tuple<int, string, string>> villagerData;
 
+    villagerData["Drago"] = make_tuple(5, "Alligator", "Snap to It!");
+    villagerData["Kyle"] = make_tuple(10, "Wolf", "Hubba hubba!");
+    villagerData["Raymond"] = make_tuple(8, "Cat", "Nice fit");
     // insert elements into the map
     // note how the right-hand side of the assignment are the vector elements
     // villagerColors["Audie"] = {"Orange", "Yellow", "Red"};
@@ -36,8 +39,8 @@ int main() {
     // }
 
     // access the map using iterators
-    cout << "\nVillagers and their favorite colors (iterators):" << endl;
-    
+    cout << "\nVillager details:" << endl;    
+
     // for (map<string, vector<string>>::iterator it = villagerColors.begin(); 
     //                                            it != villagerColors.end(); ++it) {
     //     cout << it->first << ": ";
@@ -59,7 +62,8 @@ int main() {
     villagerData.erase("Raymond");
 
     // search for an element using .find() to avoid errors
-    string searchKey = "Audie";
+    string searchKey = "Drago";
+    
     //auto it = villagerColors.find(searchKey);
     auto it = villagerData.find(searchKey);
 
