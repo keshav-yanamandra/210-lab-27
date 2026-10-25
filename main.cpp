@@ -22,17 +22,18 @@ int main() {
     string name;
 
     //menu
-    while (choice != 4) {
+    while (choice != 6) {
 
         cout << endl;
-        cout << "1. Increase Friendship" << endl;
-        cout << "2. Decrease Friendship" << endl;
-        cout << "3. Search for Villager" << endl;
-        cout << "4. Exit" << endl;
+        cout << "1. Add Villager" << endl;
+        cout << "2. Delete Villager" << endl;
+        cout << "3. Increase Friendship" << endl;
+        cout << "4. Decrease Friendship" << endl;
+        cout << "5. Search for Villager" << endl;
+        cout << "6. Exit" << endl;
         cout << "Enter choice: ";
         cin >> choice;
-
-        if (choice == 1) {
+        if (choice == 3) {
             cout << "Villager name: ";
             cin >> name;
 
@@ -46,7 +47,7 @@ int main() {
             }
         }
 
-        else if (choice == 2) {
+        else if (choice == 4) {
             cout << "Villager name: ";
             cin >> name;
 
@@ -62,7 +63,7 @@ int main() {
             }
         }
 
-        else if (choice == 3) {
+        else if (choice == 5) {
             cout << "Villager name: ";
             cin >> name;
 
@@ -76,7 +77,7 @@ int main() {
             }
         }
 
-        if (choice != 4) {
+        if (choice != 6) {
             cout << endl;
             cout << "Villager details:" << endl;
 
