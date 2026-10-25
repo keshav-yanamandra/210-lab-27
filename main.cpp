@@ -11,7 +11,6 @@ using namespace std;
 
 int main() {
     // declarations
-    //map<string, vector<string>> villagerColors;
     map<string, tuple<int, string, string>> villagerData;
 
     villagerData["Drago"] = make_tuple(5, "Alligator", "Snap to It!");
