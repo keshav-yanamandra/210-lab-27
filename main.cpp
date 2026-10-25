@@ -47,13 +47,45 @@ int main() {
         }
 
         else if (choice == 2) {
+            cout << "Villager name: ";
+            cin >> name;
+
+            auto it = villagerData.find(name);
+
+            if (it != villagerData.end()) {
+                if (get<0>(it->second) > 0) {
+                    get<0>(it->second)--;
+                }
+            }
+            else {
+                cout << name << " not found." << endl;
+            }
         }
 
         else if (choice == 3) {
+            cout << "Villager name: ";
+            cin >> name;
+
+            auto it = villagerData.find(name);
+
+            if (it != villagerData.end()) {
+                cout << it->first << " [" << get<0>(it->second) << ", "  << get<1>(it->second) << ", " << get<2>(it->second) << "]" << endl;
+            }
+            else {
+                cout << name << " not found." << endl;
+            }
         }
 
         if (choice != 4) {
+            cout << endl;
+            cout << "Villager details:" << endl;
+
+            for (auto pair : villagerData) {
+                cout << pair.first << " ["  << get<0>(pair.second) << ", " << get<1>(pair.second) << ", "  << get<2>(pair.second) << "]" << endl;
+            }
         }
+
+
     }
     
     
